@@ -10,7 +10,7 @@ fn main() {
         let cp = Command::new("git")
             .current_dir(out_dir.clone())
             .arg("clone")
-            .arg("https://github.com/os-module/lwext4-c.git")
+            .arg("https://github.com/guohuan78/lwext4-c.git")
             .arg("lwext4")
             .status()
             .expect("failed to clone lwext4");

@@ -17,6 +17,7 @@ fn main() {
         assert_eq!(cp.success(), true);
     }
     let os = env::var("CARGO_CFG_TARGET_OS").unwrap();
+    println!("{}", os);
     if os == "none" {
         build_for_none(&lwext4);
     } else {

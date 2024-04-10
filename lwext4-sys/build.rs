@@ -16,13 +16,13 @@ fn main() {
             .expect("failed to clone lwext4");
         assert_eq!(cp.success(), true);
     }
-    let os = env::var("CARGO_CFG_TARGET_OS").unwrap();
-    println!("{}", os);
-    if os == "none" {
-        build_for_none(&lwext4);
-    } else {
+    // let os = env::var("CARGO_CFG_TARGET_OS").unwrap();
+    // println!("{}", os);
+    // if os == "none" {
+    //     build_for_none(&lwext4);
+    // } else {
         build_for_os(&lwext4);
-    }
+    // }
     println!("cargo:rustc-link-lib=static=lwext4");
     println!(
         "cargo:rerun-if-changed={}",
